@@ -1,0 +1,281 @@
+body {  
+    background-image: url(image/d41051b0d575d4192ed1b22a3f2cc569.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+.card {
+    width: 700px;
+    display: inline-flex; /* Utilisation de inline-flex */
+    flex-direction: column; /* Flex direction en colonne */
+    
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+    margin-top: 200px;
+    margin-left: 400px;
+    margin-right: 300px;
+   
+  }
+  
+  .card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding-top: 30px;
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+
+
+  .container {
+    background-color:rgba(0, 0, 0, 0) ;
+    width: 550px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    display: inline-flex; /* Utilisation de inline-flex */
+    flex-direction: column; /* Flex direction en colonne */
+}
+
+
+.category-list {
+    margin-bottom: 20px;
+    
+}
+h1{
+    color:#1a0125dc;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.task.done {
+    text-decoration: line-through; /* Style de texte barré */
+    color: #3e3a40; /* Couleur du texte pour les tâches terminées */
+}
+
+
+h2{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background-color: #5c329450;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius:5px ;
+   font-style: italic;
+   color: rgb(230, 230, 230);
+   border: #5D3294 solid;
+   font-size: 20px;
+}
+.delete-category {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.iconify {
+    display: inline-block;
+    
+    vertical-align: middle; /* Pour aligner l'icône verticalement avec le texte */
+    margin-right: 5px; /* Marge à droite pour l'espace entre l'icône et le texte */
+}
+.delete-category {
+    font-family: 'Iconify'; /* Spécifiez la famille de polices d'icônes */
+    font-size: 30px; /* Ajustez la taille en fonction de vos besoins */
+     /* Spécifiez la couleur de l'icône */
+    border: none;
+    background-color: rgb(0, 0 ,0,0);
+}
+ 
+
+.category-list{
+   
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+ #new-category{
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #6b6b6b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  #new-category::placeholder {
+    color: transparent;
+  }
+  
+  #new-category:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+.Category{
+     
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 17px;
+        color: #FFE699;
+        pointer-events: none;
+      
+ }
+  
+  #new-category:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #FFE699, #5D3294);
+    border-image-slice: 1;
+  }
+  
+  #new-category:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #FFE699;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  #new-category:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  
+  #add-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2em;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    padding: .5em 1.5em;
+    color: white;
+    background: linear-gradient(0deg, rgb(84, 47, 141), rgb(150, 100, 250));
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(59, 0, 130);
+    box-shadow: 0 .5em .5em -.4em rgb(0, 0, 0, .5);
+    letter-spacing: 0.08em;
+    border-radius: 20em;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 10px; /* Ajout de marge à gauche */
+   
+  }
+  
+  #add-category:hover {
+    filter: brightness(1.2);
+    color: rgb(0, 0, 0, .5);
+  }
+  
+  #add-category:active {
+    transition: 0s;
+    transform: rotate(-10deg);
+  }
+  
+
+.tasks {
+    text-align: left;
+    font-size: large;
+ 
+  
+}
+
+
+
+.task-name {
+    flex: 1;
+    padding: 5px;
+}
+
+
+.delete-task {
+  
+    background-color: #ff333300;
+    color: #e61f1f;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 25px;
+   margin-left: 350px;
+}
+
+
+
+button.done-task{
+    
+    background-color: #ff333300;
+    color: #1fe675;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 25px;
+   margin-left: 300px
+}
+
+
+
+.task button {
+    display: inline;
+    margin-left: 10px; /* Ajoutez de l'espace entre les icônes si nécessaire */
+    float: right;
+}
+
+
+
+.task {
+    clear: both; /* Pour éviter que les éléments suivants ne flottent à côté de cette tâche */
+    overflow: hidden; /* Pour que la tâche englobe ses éléments flottants */
+    gap: .2em;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    padding: .5em 1.5em;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(59, 0, 130);
+    box-shadow: 0 .5em .5em -.4em rgb(0, 0, 0, .5);
+    letter-spacing: 0.08em;
+    
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 10px; /* Ajout de marge à gauche */
+}
+
+
+
+  
+  
+  
+ 
+  
+  
